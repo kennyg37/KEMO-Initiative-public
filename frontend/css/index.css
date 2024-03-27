@@ -621,14 +621,18 @@ input[type='checkbox'] {
 }
 
 .navbar-custom .navbar-brand.logo-image img {
-    width: 4.4375rem;
-	height: 1.75rem;
+    width: 10.4375rem;
+	height: 10.75rem;
 }
 
 .navbar-custom .navbar-brand.logo-text {
 	font: 700 2rem/1.5rem "Open Sans", sans-serif;
 	color: #fff;;
 	text-decoration: none;
+}
+.M-letter {
+    color: #86929b;
+
 }
 
 .navbar-custom .navbar-nav {
