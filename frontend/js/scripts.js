@@ -134,7 +134,7 @@
     /* Details Lightbox - Magnific Popup */
 	$('.popup-with-move-anim').magnificPopup({
 		type: 'inline',
-		fixedContentPos: false, /* keep it false to avoid html tag shift with margin-right: 17px */
+		fixedContentPos: false, 
 		fixedBgPos: true,
 		overflowY: 'auto',
 		closeBtnInside: true,
@@ -145,8 +145,7 @@
 	});
     
     
-    /* Move Form Fields Label When User Types */
-    // for input and textarea fields
+    
     $("input, textarea").keyup(function(){
 		if ($(this).val() != '') {
 			$(this).addClass('notEmpty');
@@ -159,18 +158,18 @@
     /* Sign Up Form */
     $("#signUpForm").validator().on("submit", function(event) {
     	if (event.isDefaultPrevented()) {
-            // handle the invalid form...
+           
             sformError();
             ssubmitMSG(false, "Please fill all fields!");
         } else {
-            // everything looks good!
+            
             event.preventDefault();
             ssubmitForm();
         }
     });
 
     function ssubmitForm() {
-        // initiate variables with form content
+        
 		var email = $("#semail").val();
 		var name = $("#sname").val();
 		var password = $("#spassword").val();
@@ -194,7 +193,7 @@
     function sformSuccess() {
         $("#signUpForm")[0].reset();
         ssubmitMSG(true, "Sign Up Submitted!");
-        $("input").removeClass('notEmpty'); // resets the field label after submission
+        $("input").removeClass('notEmpty'); 
     }
 
     function sformError() {
@@ -249,7 +248,7 @@
     function lformSuccess() {
         $("#logInForm")[0].reset();
         lsubmitMSG(true, "Log In Submitted!");
-        $("input").removeClass('notEmpty'); // resets the field label after submission
+        $("input").removeClass('notEmpty'); 
     }
 
     function lformError() {
