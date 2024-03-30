@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/3c840652bc.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="/frontend/css/styles.css">
+    <title>Job Poster Dashboard</title>
+</head>
+<body>
+    <div class="body-container">
+        <section id="sidebar">
+            <div class="sidebar-description">
+                <i class="fa-solid fa-user"></i>
+                <p>User: <br> <span style="font-style: italic;">Recruiter</span> </p>
+            </div>
+            <div id="sidebar-nav">
+                <ul>
+                    <li class="tab-menu active" onclick="openmenu('home')"><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+                    <li class="tab-menu" onclick="openmenu('applications')"><a href="#"><i class="fa fa-desktop"></i>Applications</a></li>
+                    <li class="tab-menu" onclick="openmenu('tools')"><a href="#"><i class="fa fa-sitemap"></i> Tools</a></li >
+                    <li class="tab-menu" onclick="openmenu('marketing')"><a href="#"><i class="fa fa-comments-o"></i> Marketing</a></li >
+                    <li class="tab-menu" onclick="openmenu('employees')"><a href="#"><i class="fa fa-users"></i> Employees</a></li >
+                    <li class="tab-menu" onclick="openmenu('calendar')"><a href="#"><i class="fa fa-calendar"></i> Calendar</a></li>
+                </ul>
+            </div>
+        </section>
+        <section id="content">
+            <div id="header">
+                <div class="header-nav">
+                    <div class="menu-button"><!--<i class="fa fa-navicon"></i>--></div>
+                    <div class="nav">
+                        <ul>
+                            <li class="nav-settings">
+                                <div class="font-icon"><i class="fa fa-tasks"></i></div>
+                            </li>
+                            <li class="nav-mail">
+                                <div class="font-icon">
+                                    <i class="fa fa-envelope-o"></i>
+                                </div>
+                            </li>
+                            <li class="nav-calendar">
+                                <div class="font-icon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                            </li>
+                            <li class="nav-chat">
+                                <div class="font-icon">
+                                    <i class="fa fa-comments-o"></i>
+                                </div>
+                            </li>
+                            <li class="nav-profile">
+                                <div class="nav-profile-image">
+                                    <img src="elvin.jpeg" alt="">
+                                    <div class="nav-profile-name">
+                                        Elvin Mgeni<i class="fa fa-caret-down"></i>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="main-content main-default" id="home">
+                    <div class="main-container">
+                        <div class="recent">
+                            <h2>Recent Activities</h2>
+                            <div class="activity">
+                                <div class="activity-card">
+                                    <div class="activity-details">
+                                        <p>Job: Farm supervisor</p>
+                                        <p>Status: Published</p>
+                                    </div>
+                                    <div class="activity-time">
+                                        <p>2 hours ago</p>
+                                    </div>
+                                    <div class="manipulate">
+                                        <button id="home-edit-button">Edit</button>
+                                        <i class="fa-solid fa-trash"></i>
+                                    </div>
+                                </div>
+                                <div class="activity-card">
+                                    <div class="activity-details">
+                                        <p>Job: Assistant manager</p>
+                                        <p>Published</p>
+                                    </div>
+                                    <div class="activity-time">
+                                        <p>2 hours ago</p>
+                                    </div>
+                                    <div class="manipulate">
+                                        <button id="home-edit-button">Edit</button>
+                                        <i class="fa-solid fa-trash"></i>
+                                    </div>
+                                </div>
+                                <div class="activity-card">
+                                    <div class="activity-details">
+                                        <p>Job: Human resources</p>
+                                        <p>Published</p>
+                                    </div>
+                                    <div class="activity-time">
+                                        <p>2 hours ago</p>
+                                    </div>
+                                    <div class="manipulate">
+                                        <button id="home-edit-button">Edit</button>
+                                        <i class="fa-solid fa-trash"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="summary">
+                            <h2>Summary</h2>
+                            <div class="summary-container">
+                                <div class="summary-notifications">
+                                    <div class="titles">
+                                        <h3>Item</h3>
+                                        <h3>Status</h3>
+                                        <h3>Time stamp</h3>
+                                    </div>
+                                    <div class="notification-card" id="published">
+                                        <div class="notification-details">
+                                            <p>Job</p>
+                                            <p>Published</p>
+                                        </div>
+                                        <div class="notification-time">
+                                            <p>30 minutes ago</p>
+                                        </div>
+                                    </div>
+                                    <div class="notification-card" id="commented">
+                                        <div class="notification-details">
+                                            <p>Alex submitted </p>
+                                            <p>Appplication</p>
+                                        </div>
+                                        <div class="notification-time">
+                                            <p>2 hours ago</p>
+                                        </div>
+                                    </div>
+                                    <div class="notification-card" id="published">
+                                        <div class="notification-details">
+                                            <p>Job</p>
+                                            <p>Published</p>
+                                        </div>
+                                        <div class="notification-time">
+                                            <p>2.5 hours ago</p>
+                                        </div>
+                                    </div>
+                                    <div class="notification-card" id="liked">
+                                        <div class="notification-details">
+                                            <p>Eric submitted</p>
+                                            <p>Application</p>
+                                        </div>
+                                        <div class="notification-time">
+                                            <p>3 hours ago</p>
+                                        </div>
+                                    </div>
+                                    <div class="notification-card" id="published">
+                                        <div class="notification-details">
+                                            <p>Job</p>
+                                            <p>Published</p>
+                                        </div>
+                                        <div class="notification-time">
+                                            <p>4 hours ago</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="summary-data">
+                                    <div class="summary-card">
+                                        <div class="summary-icon">
+                                            <i class="fa-solid fa-eye"></i>
+                                        </div>
+                                        <div class="summary-details">
+                                            <p>Reach</p>
+                                            <p class="count">1000</p>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="summary-card">
+                                        <div class="summary-icon">
+                                            <i class="fa-solid fa-thumbs-up"></i>
+                                        </div>
+                                        <div class="summary-details">
+                                            <p>Applied</p>
+                                            <p class="count">342</p>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="summary-card">
+                                        <div class="summary-icon">
+                                            <i class="fa-solid fa-comment"></i>
+                                        </div>
+                                        <div class="summary-details">
+                                            <p>Recruits</p>
+                                            <p class="count">10</p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-content" id="applications"></div>
+                <div class="main-content" id="tools"></div>
+                <div class="main-content" id="marketing"></div>
+                <div class="main-contet" id="employees"></div>
+                <div class="main-content" id="calendar"></div>
+            </div>
+        </section>
+    </div>
+<script src="index.js"></script>
+</body>
+</html>
