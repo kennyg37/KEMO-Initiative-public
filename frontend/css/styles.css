@@ -39,7 +39,7 @@ a {
 }
 .header-nav {
     height: 100px;
-    background: #2A2D33;
+    background: #138A36;
 }
 .menu-button {
     float: left;
@@ -141,7 +141,7 @@ div.user-image {
     overflow: hidden;
     width: 210px;
     height: 100%;
-    background: #2A2D33;
+    background: #138A36;
     float: left;
     position: fixed;
     margin-right: 210px;
@@ -150,7 +150,7 @@ div.user-image {
     width: 106%;
     height: calc(100% - 95px);
     padding: 0;
-    background: #2A2D33;
+    background: #138A36;
     border-right: 1px solid #E0E0E0;
     overflow-y: scroll;
 }
@@ -307,13 +307,13 @@ div.user-image {
     padding: 10px;
     border: none;
     border-radius: 20px;
-    background: #0B132B;
+    background: #138A36;
     color: white;
     cursor: pointer;
     width: 150px;
 }
 .manipulate button:hover{
-    background: #1F3146;
+    background: #016521;
 }
 .manipulate i{
     padding-top: 5px;

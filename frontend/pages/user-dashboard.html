@@ -8,23 +8,23 @@
     <script src="https://kit.fontawesome.com/3c840652bc.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="/frontend/css/styles.css">
-    <title>Job Poster Dashboard</title>
+    <title>KEMO Wen-app</title>
 </head>
 <body>
     <div class="body-container">
         <section id="sidebar">
             <div class="sidebar-description">
                 <i class="fa-solid fa-user"></i>
-                <p>User: <br> <span style="font-style: italic;">Recruiter</span> </p>
+                <p>User: <br> <span style="font-style: italic;">Admin <br>id:240330</span> </p>
             </div>
             <div id="sidebar-nav">
                 <ul>
                     <li class="tab-menu active" onclick="openmenu('home')"><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-                    <li class="tab-menu" onclick="openmenu('applications')"><a href="#"><i class="fa fa-desktop"></i>Applications</a></li>
+                    <li class="tab-menu" onclick="openmenu('applications')"><a href="#"><i class="fa fa-desktop"></i>App</a></li>
                     <li class="tab-menu" onclick="openmenu('tools')"><a href="#"><i class="fa fa-sitemap"></i> Tools</a></li >
-                    <li class="tab-menu" onclick="openmenu('marketing')"><a href="#"><i class="fa fa-comments-o"></i> Marketing</a></li >
-                    <li class="tab-menu" onclick="openmenu('employees')"><a href="#"><i class="fa fa-users"></i> Employees</a></li >
-                    <li class="tab-menu" onclick="openmenu('calendar')"><a href="#"><i class="fa fa-calendar"></i> Calendar</a></li>
+                    <li class="tab-menu" onclick="openmenu('marketing')"><a href="#"><i class="fa fa-comments-o"></i> Campaigns</a></li >
+                    <li class="tab-menu" onclick="openmenu('campaigns')"><a href="#"><i class="fa fa-users"></i> Strategies</a></li >
+                    <li class="tab-menu" onclick="openmenu('settings')"><a href="#"><i class="fa fa-gear"></i> Settings</a></li>
                 </ul>
             </div>
         </section>
@@ -205,11 +205,11 @@
                 <div class="main-content" id="applications"></div>
                 <div class="main-content" id="tools"></div>
                 <div class="main-content" id="marketing"></div>
-                <div class="main-contet" id="employees"></div>
-                <div class="main-content" id="calendar"></div>
+                <div class="main-contet" id="campaigns"></div>
+                <div class="main-content" id="settings"></div>
             </div>
         </section>
     </div>
-<script src="index.js"></script>
+<script src="/frontend/js/dash.js"></script>
 </body>
 </html>
