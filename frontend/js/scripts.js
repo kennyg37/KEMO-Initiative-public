@@ -154,62 +154,8 @@
 		}
     });
 
-
-    /* Sign Up Form */
-    $("#signUpForm").validator().on("submit", function(event) {
-    	if (event.isDefaultPrevented()) {
-           
-            sformError();
-            ssubmitMSG(false, "Please fill all fields!");
-        } else {
-            
-            event.preventDefault();
-            ssubmitForm();
-        }
-    });
-
-    function ssubmitForm() {
-        
-		var email = $("#semail").val();
-		var name = $("#sname").val();
-		var password = $("#spassword").val();
-        var terms = $("#sterms").val();
-        
-        $.ajax({
-            type: "POST",
-            url: "php/signupform-process.php",
-            data: "email=" + email + "&name=" + name + "&password=" + password + "&terms=" + terms, 
-            success: function(text) {
-                if (text == "success") {
-                    sformSuccess();
-                } else {
-                    sformError();
-                    ssubmitMSG(false, text);
-                }
-            }
-        });
-	}
-
-    function sformSuccess() {
-        $("#signUpForm")[0].reset();
-        ssubmitMSG(true, "Sign Up Submitted!");
-        $("input").removeClass('notEmpty'); 
-    }
-
-    function sformError() {
-        $("#signUpForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-            $(this).removeClass();
-        });
-	}
-
-    function ssubmitMSG(valid, msg) {
-        if (valid) {
-            var msgClasses = "h3 text-center tada animated";
-        } else {
-            var msgClasses = "h3 text-center";
-        }
-        $("#smsgSubmit").removeClass().addClass(msgClasses).text(msg);
-    }
+    
+    
 
 
     /* Log In Form */
@@ -377,18 +323,6 @@
         $("#pmsgSubmit").removeClass().addClass(msgClasses).text(msg);
     }
     
-
-    /* Back To Top Button */
-    // create the back to top button
-    $('body').prepend('<a href="body" class="back-to-top page-scroll">Back to Top</a>');
-    var amountScrolled = 700;
-    $(window).scroll(function() {
-        if ($(window).scrollTop() > amountScrolled) {
-            $('a.back-to-top').fadeIn('500');
-        } else {
-            $('a.back-to-top').fadeOut('500');
-        }
-    });
 
 
 	/* Removes Long Focus On Buttons */
